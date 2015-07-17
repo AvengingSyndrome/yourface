@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "YourFace",
+	"description": "replaces wikipedia with your face",
+	"version": "1.0",
+    "content_scripts": [
+    {
+	  "run_at":"document_idle",
+      "matches": ["*://*.wikipedia.org/*"],
+      "exclude_matches":["*://*.wikipedia.org/wiki/Main_Page"],
+      "js": ["jquery.js","yourface.js"]
+    }]
+}
